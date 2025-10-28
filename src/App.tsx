@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import CreateChat from "./pages/CreateChat";
+import Chat from "./pages/Chat";
+import Contacts from "./pages/Contacts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,7 +23,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/chat/new" element={<CreateChat />} />
+          <Route path="/create-chat" element={<CreateChat />} />
+          <Route path="/chat/:chatId" element={<Chat />} />
+          <Route path="/contacts" element={<Contacts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
